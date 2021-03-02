@@ -14,46 +14,9 @@ export const Countdown: React.FC = () => {
     resetCountdown, 
     startCountdown 
   } = useContext(CountdownContext)
-  // const { startNewChallenge } = useContext(ChallengesContext)
-
-  // const [time, setTime] = useState(0.05 * 60)
-  // const [isCountdownActive, setIsCountdownActive] = useState(false)
-  // const [isCountdownDone, setIsCountdownDone] = useState(false)
-
-  // const minutes = Math.floor(time / 60)
-  // const seconds = time % 60
 
   const [minuteDecimalDigit, minuteUnitDigit] = String(minutes).padStart(2, '0').split('')
   const [secondsDecimalDigit, secondsUnitDigit] = String(seconds).padStart(2, '0').split('')
-
-  // function startCountdown() {
-  //   setIsCountdownActive(true)
-  // }
-
-  // function resetCountdown() {
-  //   // clearTimeout(countdownTimeout)
-  //   setIsCountdownActive(false)
-  //   setTime(0.05 * 60)
-  // }
-
-  // useEffect(() => {
-  //   // effect
-  //   if (isCountdownActive && time > 0) {
-  //     countdownTimeout = setTimeout(() => {
-  //       setTime(time - 1)
-  //     }, 1000)
-  //   } else if (isCountdownActive && time === 0) {
-  //     console.log('countdown ended');
-  //     setIsCountdownDone(true)
-  //     setIsCountdownActive(false)
-  //     startNewChallenge()
-  //   }
-
-  //   return () => {
-  //     // cleanup
-  //     clearTimeout(countdownTimeout)
-  //   }
-  // }, [isCountdownActive, time])
 
   return (
     <div>
